@@ -14,9 +14,16 @@ header {
 }
 
 header div {
+  display: flex;
   overflow: hidden;
   width: 20%;
   min-height: 3rem;
+}
+header div p {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .nav {
@@ -24,14 +31,18 @@ header div {
   width: 80%;
 }
 .nav__item {
+  display: flex;
   width: 20%;
   background-color: #232323;
 }
 
 .nav__item a {
+  flex-grow: 1;
   line-height: 3rem;
   color: #fff;
   text-decoration: none;
+
+  text-align: center;
 }
 
 .nav__item a:hover {
@@ -171,14 +182,70 @@ h2 {
 }
 
 .box--progress__bar {
-  width: 80%;
   background-color: #54be90;
 }
 
 .box--progress__percentage {
-  width: 20%;
   text-align: end;
   background-color: #ebebeb;
+}
+
+.html .box--progress__bar {
+  width: 80%;
+}
+
+.html .box--progress__percentage {
+  width: 20%;
+}
+
+.css .box--progress__bar {
+  width: 80%;
+}
+
+.css .box--progress__percentage {
+  width: 20%;
+}
+.javascript .box--progress__bar {
+  width: 70%;
+}
+
+.javascript .box--progress__percentage {
+  width: 30%;
+}
+
+.react .box--progress__bar {
+  width: 60%;
+}
+.react .box--progress__percentage {
+  width: 40%;
+}
+
+.jquery .box--progress__bar {
+  width: 70%;
+}
+.jquery .box--progress__percentage {
+  width: 30%;
+}
+
+.php .box--progress__bar {
+  width: 60%;
+}
+.php .box--progress__percentage {
+  width: 40%;
+}
+
+.laravel .box--progress__bar {
+  width: 60%;
+}
+.laravel .box--progress__percentage {
+  width: 40%;
+}
+
+.ux .box--progress__bar {
+  width: 50%;
+}
+.ux .box--progress__percentage {
+  width: 50%;
 }
 
 .portfolio {
@@ -211,6 +278,10 @@ h2 {
   font-size: 1.2rem;
 }
 
+.portfolio__item:hover {
+  background-color: #000;
+}
+
 .portfolio__item figure {
   display: flex;
   justify-content: center;
@@ -234,6 +305,25 @@ h2 {
 .portfolio__item__description h3 {
   align-self: flex-start;
   margin-left: 1rem;
+  width: 90%;
+  z-index: 1;
+}
+
+.portfolio__item__description button {
+  height: 3rem;
+  z-index: -1;
+  position: relative;
+  bottom: 3rem;
+  border-radius: 5px;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  background-color: #54be90;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.portfolio__item__description:hover {
+  z-index: 1;
 }
 
 .about {
@@ -363,9 +453,21 @@ footer {
   padding-top: 5rem;
 }
 
-footer p:nth-child(1) {
+footer .bar {
+  height: 0.5rem;
+  width: 80vw;
+  background-color: #54be90;
+  position: relative;
+  top: 3.5rem;
+}
+footer p:nth-child(2) {
+  background-color: #fff;
   font-size: 2rem;
   font-weight: 800;
+  margin-top: 0;
+  z-index: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .footer--logos {
